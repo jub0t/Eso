@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -16,7 +17,9 @@
     "postcss": "^8.4.47",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.4.14"
+    "react-font": "^1.2.1",
+    "tailwindcss": "^3.4.14",
+    "vite-svg-loader": "^5.1.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
@@ -24,6 +27,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }

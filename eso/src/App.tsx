@@ -1,14 +1,19 @@
-import "./App.css";
+import LeftFrame from "./components/LeftFrame";
+import ManagePage from "./pages/Manage";
+
+import "./output.css";
+import "./master.css"
 
 function App() {
   return (
-    <main className="h-screen flex flex-wrap w-full overflow-x-hidden">
-      <section className="w-[10%] border-right-2 border-gray-600">
-
+    <main className="h-screen flex w-full overflow-x-hidden">
+      <section className="min-w-[200px] max-w-[230px] h-full border-r border-gray-200">
+        <LeftFrame />
       </section>
 
-      <section className="w-[90%]">
-
+      {/* Take rest of the remaining width */}
+      <section className="flex-1">
+        <ManagePage />
       </section>
     </main>
   );

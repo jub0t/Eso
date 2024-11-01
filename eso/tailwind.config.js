@@ -1,6 +1,6 @@
 module.exports = {
     mode: 'jit',
-    purge: ['./src/**/*.{vue,js,ts}'],
+    purge: ['./src/**/*.{ts,js,tsx}'],
     theme: {
         // Your custom theme configuration
     },
