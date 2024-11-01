@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+*.ts linguist-language=Typescript
+*.ts linguist-vendored
+*.js linguist-vendored
+*.html linguist-vendored
+*.css linguist-vendored
