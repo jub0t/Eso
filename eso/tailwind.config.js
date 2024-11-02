@@ -1,9 +1,7 @@
 module.exports = {
-    mode: 'jit',
-    purge: ['./src/**/*.{ts,js,tsx}'],
-    theme: {
-        // Your custom theme configuration
-    },
+    // mode: 'jit',
+    content: ['./src/**/*.{ts,js,tsx}'],
+    theme: {},
     variants: {},
     plugins: [],
 }

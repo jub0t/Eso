@@ -5,6 +5,8 @@ import ManagePage from "./pages/Manage";
 import "./output.css";
 import "./master.css";
 import EncryptPage from "./pages/Encrypt";
+import CreatePage from "./pages/Create";
+import DecryptPage from "./pages/Decrypt";
 
 function App() {
   return (
@@ -24,6 +26,14 @@ function App() {
             <Route
               path="/encrypt"
               element={<EncryptPage />}
+            />
+            <Route
+              path="/decrypt"
+              element={<DecryptPage />}
+            />
+            <Route
+              path="/create"
+              element={<CreatePage />}
             />
           </Routes>
         </HashRouter>
