@@ -4,28 +4,33 @@ import DecryptIcon from "../icons/decrypt.svg?react";
 import SizeIcon from "../icons/size.svg?react";
 import RepeatIcon from "../icons/repeat.svg?react";
 import DateIcon from "../icons/date.svg?react";
+import React from "react";
 
-export default function ManagePage() {
-    return (
-        <section className="px-10 py-8 w-full h-full flex-wrap flex">
-            <section className="grid xl:grid-cols-2 gap-6 w-full h-full">
-                {
-                    Array.from({ length: 8 })
-                        .map(_ => {
-                            return <div>
-                                <Card
-                                    title="Master Key"
-                                    description="My personal master key that I use for normal communication."
-                                    button={{
-                                        label: "Manage"
-                                    }}
-                                />
-                            </div>
-                        })
-                }
+export default class ManagePage extends React.Component {
+    render(): React.ReactNode {
+        return (
+            <section className="px-8 py-8 w-full h-full flex-wrap flex">
+                <h1 className="tracking-wider font-light uppercase text-gray-600">Manage Keys</h1>
+
+                <section className="mt-8 grid lg:grid-cols-2 gap-6 w-full h-full">
+                    {
+                        Array.from({ length: 8 })
+                            .map(_ => {
+                                return <div>
+                                    <Card
+                                        title="Master Key"
+                                        description="My personal master key that I use for normal communication."
+                                        button={{
+                                            label: "Manage"
+                                        }}
+                                    />
+                                </div>
+                            })
+                    }
+                </section>
             </section>
-        </section>
-    );
+        );
+    }
 }
 
 function Card({ title, description, button }: {
