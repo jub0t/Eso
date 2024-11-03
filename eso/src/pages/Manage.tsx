@@ -5,6 +5,7 @@ import SizeIcon from "../icons/size.svg?react";
 import RepeatIcon from "../icons/repeat.svg?react";
 import DateIcon from "../icons/date.svg?react";
 import React from "react";
+import Keys from "../data/keys";
 
 export default class ManagePage extends React.Component {
     render(): React.ReactNode {
@@ -14,12 +15,11 @@ export default class ManagePage extends React.Component {
 
                 <section className="mt-8 grid lg:grid-cols-2 gap-6 w-full h-full">
                     {
-                        Array.from({ length: 8 })
-                            .map(_ => {
+                        Keys
+                            .map((key) => {
                                 return <div>
                                     <Card
-                                        title="Master Key"
-                                        description="My personal master key that I use for normal communication."
+                                        {...key}
                                         button={{
                                             label: "Manage"
                                         }}
@@ -33,9 +33,12 @@ export default class ManagePage extends React.Component {
     }
 }
 
-function Card({ title, description, button }: {
+function Card({ title, description, button, keySize, created, actions }: {
     title: string,
     description: string
+    created: Date,
+    actions: number,
+    keySize: number,
     button: {
         label: string
     },
@@ -60,7 +63,7 @@ function Card({ title, description, button }: {
                         </p>
                         <p className="text-gray-800">
                             <span>
-                                {4 * 1024} Bits
+                                {keySize} Bits
                             </span>
                         </p>
                     </div>
@@ -73,7 +76,7 @@ function Card({ title, description, button }: {
                         </p>
                         <p className="text-gray-800">
                             <span>
-                                {new Intl.NumberFormat("en-US").format(359141)}
+                                {new Intl.NumberFormat("en-US").format(actions)}
                             </span>
                         </p>
                     </div>
@@ -86,7 +89,7 @@ function Card({ title, description, button }: {
                         </p>
                         <p className="text-gray-800">
                             <span>
-                                {new Date().toLocaleDateString()}
+                                {new Date(created).toLocaleDateString()}
                             </span>
                         </p>
                     </div>

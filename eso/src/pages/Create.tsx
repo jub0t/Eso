@@ -72,12 +72,19 @@ export default class CreatePage extends React.Component {
                     <div className="w-full p-5 border gap-2 rounded-[12px] min-h-[250px] bg-gray-50 flex flex-col">
                         <div className="w-full grid">
                             <label htmlFor="public_key" className="text-xs">Public Key</label>
-                            <textarea disabled name="public_key" id="publicKey" className="bg-gray-100 rounded-[7px] border border-gray-200"></textarea>
+                            <textarea
+                                disabled
+                                rows={10}
+                                name="public_key"
+                                id="publicKey"
+                                className="p-4 bg-gray-100 rounded-[7px] border border-gray-200">
+                                {crypto.randomUUID()}
+                            </textarea>
                         </div>
 
                         <div className="w-full grid">
                             <label htmlFor="private_key" className="text-xs">Private Key</label>
-                            <textarea disabled name="private_key" id="privateKey" className="bg-gray-100 rounded-[7px] border border-gray-200"></textarea>
+                            <textarea rows={10} disabled name="private_key" id="privateKey" className="bg-gray-100 rounded-[7px] border border-gray-200"></textarea>
                         </div>
                     </div>
                 </section>
