@@ -2,6 +2,7 @@ import DatabaseIcon from "../icons/data.svg?react";
 import DecryptIcon from "../icons/decrypt.svg?react";
 import EncryptIcon from "../icons/encrypt.svg?react";
 import CreateIcon from "../icons/create.svg?react";
+import RepeatIcon from "../icons/repeat.svg?react"
 import React from "react";
 
 const Items = [
@@ -24,6 +25,11 @@ const Items = [
         path: "/#/create",
         icon: CreateIcon,
         label: "Create New"
+    },
+    {
+        path: "/#/trash",
+        icon: RepeatIcon,
+        label: "Trash"
     },
 ];
 

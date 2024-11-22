@@ -10,7 +10,25 @@ export default class CreatePage extends React.Component {
                     <div className="w-full p-5 border gap-2 rounded-[12px] min-h-[250px] bg-gray-50 flex flex-col">
                         <div className="w-full flex gap-2 flex-wrap">
                             <div className="flex-1 grid">
-                                <label htmlFor="unique_id" className="text-xs">Unique ID</label>
+                                <label htmlFor="unique_id" className="text-xs">Key Name (Not Used In Generation)</label>
+                                <input
+                                    type="text"
+                                    name="unique_id"
+                                    placeholder={"Communication Key #1"}
+                                    className="open-sans focus:outline-none text-sm focus:ring-2 focus:ring-green-800 px-3 py-3 bg-gray-100 rounded-lg border border-gray-300 transition-shadow"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="py-3">
+                            <div className="w-full h-[2px] bg-gray-100">
+                                {/* Divider or Separator */}
+                            </div>
+                        </div>
+
+                        <div className="w-full flex gap-2 flex-wrap">
+                            <div className="flex-1 grid">
+                                <label htmlFor="unique_id" className="text-xs">Username or Unique ID</label>
                                 <input
                                     type="text"
                                     name="unique_id"
@@ -32,14 +50,14 @@ export default class CreatePage extends React.Component {
                                     type="email"
                                     name="email"
                                     placeholder="johndoe@example.com"
-                                    className="open-sans focus:outline-none focus:ring-2 focus:ring-green-800 px-3 py-3 bg-gray-100 rounded-lg border border-gray-300 transition-shadow"
+                                    className="open-sans focus:outline-none text-sm focus:ring-2 focus:ring-green-800 px-3 py-3 bg-gray-100 rounded-lg border border-gray-300 transition-shadow"
                                 />
                             </div>
                             <div className="grid">
                                 <label htmlFor="key_size" className="text-xs">Key Size</label>
                                 <select
                                     name="key_size"
-                                    className="open-sans focus:outline-none focus:ring-2 focus:ring-green-800 px-3 py-3 bg-gray-100 rounded-lg border border-gray-300 transition-shadow"
+                                    className="open-sans focus:outline-none text-sm focus:ring-2 focus:ring-green-800 px-3 py-3 bg-gray-100 rounded-lg border border-gray-300 transition-shadow"
                                 >
                                     <option value="1024">1024 bits</option>
                                     <option value="2048">2048 bits</option>
@@ -57,7 +75,7 @@ export default class CreatePage extends React.Component {
                                     type="password"
                                     name="secret_key"
                                     placeholder="***********"
-                                    className="open-sans focus:outline-none focus:ring-2 focus:ring-green-800 px-3 py-3 bg-gray-100 rounded-lg border border-gray-300 transition-shadow"
+                                    className="open-sans focus:outline-none focus:ring-2 text-sm focus:ring-green-800 px-3 py-3 bg-gray-100 rounded-lg border border-gray-300 transition-shadow"
                                 />
                             </div>
                         </div>
