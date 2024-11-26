@@ -1,4 +1,4 @@
-# ESO - Keep Your Keys Safe
+# ESO
 
 ![Preview](https://i.ibb.co/v1v46Dn/image.png)
 
